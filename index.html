@@ -67,8 +67,8 @@
                 confirmed_date: "確診日期 (Day 0)",
                 doxy_title: "抗生素療程 (Doxycycline)",
                 doxy_desc: "確診日當天開始，每日兩次，連續 28 天",
-                pred_title: "初期穩定劑 (Prednisolone - 2週)",
-                stabilization_note: "※ 若症狀持續(尤其是Class 3)，應持續治療直至病況穩定，不限於兩週。",
+                pred_title: "初期穩定劑 (Prednisolone - 4週)",
+                stabilization_note: "※ 若症狀持續(尤其是Class 3)，應持續治療直至病況穩定，不限於四週。",
                 prevention_title: "預防藥投藥計畫",
                 prevention_footer: "自 {date} 起",
                 lifelong_prevention: "終身每月固定投藥",
@@ -117,8 +117,8 @@
                 confirmed_date: "Diagnosis (Day 0)",
                 doxy_title: "Antibiotic Therapy (Doxycycline)",
                 doxy_desc: "Starting Day 0, twice daily for 28 days.",
-                pred_title: "Initial Stabilization (Prednisolone - 2wks)",
-                stabilization_note: "※ For severe cases (Class 3), continue stabilization until stable. Treatment may exceed 2 weeks if necessary.",
+                pred_title: "Initial Stabilization (Prednisolone - 4wks)",
+                stabilization_note: "※ For severe cases (Class 3), continue stabilization until stable. Treatment may exceed 4 weeks if necessary.",
                 prevention_title: "Prevention Plan",
                 prevention_footer: "Starting {date}",
                 lifelong_prevention: "LIFELONG PREVENTION",
@@ -167,8 +167,8 @@
                 confirmed_date: "診斷日 (Day 0)",
                 doxy_title: "抗生物質療法 (ドキシサイクリン)",
                 doxy_desc: "診斷當日から開始、1日2回、28日間連続服用",
-                pred_title: "初期安定化期間 (ステロイド - 2週間)",
-                stabilization_note: "※ 症状が続く場合（特にClass 3）、2週間にとらわれず、病状が安定するまで治療を継続してください。",
+                pred_title: "初期安定化期間 (ステロイド - 4週間)",
+                stabilization_note: "※ 症状が続く場合（特にClass 3）、4週間にとらわれず、病状が安定するまで治療を継続してください。",
                 prevention_title: "予防薬投与計画",
                 prevention_footer: "{date} より開始",
                 lifelong_prevention: "生涯の予防継続",
@@ -282,7 +282,8 @@
                     doxy: { start: formatDate(dayZero), end: formatDate(addDays(dayZero, 27)) },
                     symptomaticPred: isSymptomatic ? [
                         { label: t.pred_w1, range: `${formatDate(dayZero)} - ${formatDate(addDays(dayZero, 6))}` },
-                        { label: t.pred_w2, range: `${formatDate(addDays(dayZero, 7))} - ${formatDate(addDays(dayZero, 13))}` }
+                        { label: t.pred_w2, range: `${formatDate(addDays(dayZero, 7))} - ${formatDate(addDays(dayZero, 13))}` },
+                        { label: t.pred_w34, range: `${formatDate(addDays(dayZero, 14))} - ${formatDate(addDays(dayZero, 27))}` }
                     ] : null,
                     prevention: [
                         { day: 'D0', date: formatDate(dayZero) },
@@ -317,7 +318,7 @@
                                         ))}
                                     </div>
                                 </div>
-                                <div className="text-[10px] text-slate-400 font-black tracking-widest uppercase italic">AHS Protocol Visualizer v2.7.1</div>
+                                <div className="text-[10px] text-slate-400 font-black tracking-widest uppercase italic">AHS Protocol Visualizer v2.8</div>
                             </div>
 
                             <div className="flex flex-col md:flex-row gap-8 items-start">
