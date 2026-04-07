@@ -273,8 +273,8 @@
                 if (!dayZero) return null;
                 const getPredTable = (baseDateStr) => [
                     { label: t.pred_w1, range: `${formatDate(baseDateStr)} - ${formatDate(addDays(baseDateStr, 6))}` },
-                    { label: t.pred_w2, range: `${formatDate(baseDateStr, 7)} - ${formatDate(addDays(baseDateStr, 13))}` },
-                    { label: t.pred_w34, range: `${formatDate(baseDateStr, 14)} - ${formatDate(addDays(baseDateStr, 27))}` }
+                    { label: t.pred_w2, range: `${formatDate(addDays(baseDateStr, 7))} - ${formatDate(addDays(baseDateStr, 13))}` },
+                    { label: t.pred_w34, range: `${formatDate(addDays(baseDateStr, 14))} - ${formatDate(addDays(baseDateStr, 27))}` }
                 ];
 
                 return {
@@ -282,7 +282,7 @@
                     doxy: { start: formatDate(dayZero), end: formatDate(addDays(dayZero, 27)) },
                     symptomaticPred: isSymptomatic ? [
                         { label: t.pred_w1, range: `${formatDate(dayZero)} - ${formatDate(addDays(dayZero, 6))}` },
-                        { label: t.pred_w2, range: `${formatDate(dayZero)} - ${formatDate(addDays(dayZero, 7))} ` }
+                        { label: t.pred_w2, range: `${formatDate(addDays(dayZero, 7))} - ${formatDate(addDays(dayZero, 13))}` }
                     ] : null,
                     prevention: [
                         { day: 'D0', date: formatDate(dayZero) },
@@ -317,7 +317,7 @@
                                         ))}
                                     </div>
                                 </div>
-                                <div className="text-[10px] text-slate-400 font-black tracking-widest uppercase italic">AHS Protocol Visualizer v2.7</div>
+                                <div className="text-[10px] text-slate-400 font-black tracking-widest uppercase italic">AHS Protocol Visualizer v2.7.1</div>
                             </div>
 
                             <div className="flex flex-col md:flex-row gap-8 items-start">
